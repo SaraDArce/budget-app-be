@@ -9,7 +9,6 @@ transactionRoutes.get("/", (req, res) => {
 });
 
 // /transactions/1
-
 transactionRoutes.get("/:index", (req, res) => {
   const { index } = req.params;
   if (transactionsArr[index]) {
@@ -65,13 +64,3 @@ transactionRoutes.put("/:index", (req, res) => {
 });
 
 module.exports = transactionRoutes;
-
-// let { date, trans, amount, type, category, description, tags } = req.body;
-// if (date && trans && amount) {
-//   transactionsArr.push(req.body);
-//   res.json(transactionsArr[transactionsArr.length - 1]);
-// } else {
-//   res.status(422).json({
-//     error: "**Please provide all mandatory fields",
-//   });
-// }
